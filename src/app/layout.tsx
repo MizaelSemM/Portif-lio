@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
-  title: "Rafael Andrade — Full-Stack Developer",
+  title: "Mizael Borges — Full-Stack Developer",
   description:
     "Portfólio de Rafael Andrade, desenvolvedor full-stack especializado em React, Next.js, Node.js e PostgreSQL.",
 };
