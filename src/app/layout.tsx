@@ -9,7 +9,7 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jet
 export const metadata: Metadata = {
   title: "Mizael Borges — Full-Stack Developer",
   description:
-    "Portfólio de Rafael Andrade, desenvolvedor full-stack especializado em React, Next.js, Node.js e PostgreSQL.",
+    "Portfólio de Mizael Borges, desenvolvedor full-stack especializado em React, Next.js, Node.js e PostgreSQL.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
