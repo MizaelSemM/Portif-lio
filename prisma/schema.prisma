@@ -1,0 +1,42 @@
+// Schema do banco de dados do portfólio.
+// Rode "npx prisma migrate dev" após configurar o DATABASE_URL no .env
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ProjectStatus {
+  PRODUCAO
+  EM_DESENVOLVIMENTO
+  ARQUIVADO
+}
+
+model Project {
+  id          String        @id @default(cuid())
+  order       Int           @default(0)
+  title       String
+  description String
+  badges      String[]
+  githubUrl   String
+  demoUrl     String?
+  status      ProjectStatus @default(PRODUCAO)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@map("projects")
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
+
+  @@map("contact_messages")
+}
